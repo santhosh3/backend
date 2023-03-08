@@ -50,7 +50,7 @@ async function sendImage(req,res){
         const destinationPath = 'uploads/'
         await copyFile(sourcePath, destinationPath + originalFilename);
         await deleteNonImageFiles(destinationPath);
-        let imageURL = `https://chatapp-ecru.vercel.app/uploads/${req.file.originalname}`
+        let imageURL = `https://chatapp-cdo0nah5e-santhosh3.vercel.app/uploads/${req.file.originalname}`
         
         const {chatId} = req.body;
         if(!imageURL || !chatId){
