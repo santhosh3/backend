@@ -51,7 +51,7 @@ async function registerUser(req,res){
         const destinationPath = 'uploads/'
         await copyFile(sourcePath, destinationPath + originalFilename);
         await deleteNonImageFiles(destinationPath);
-        var imageURL = `http://localhost:5000/uploads/${req.file.originalname}`
+        var imageURL = `https://chatapp-ecru.vercel.app/uploads/${req.file.originalname}`
         
         const body = {
             name : req.body.name,
